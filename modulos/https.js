@@ -10,7 +10,8 @@ function router(req, res) {
 
   switch (req.url) {
     case '/hola':
-      res.write('hola, que tal');
+      let saludo = hola();
+      res.write(saludo);
       res.end();
       break;
 
@@ -24,4 +25,8 @@ function router(req, res) {
   // res.write('hola, ya se usar http de NodeJS');
 
   // res.end();
+}
+
+function hola() {
+  return 'hola que tal?';
 }
